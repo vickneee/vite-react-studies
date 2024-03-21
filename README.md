@@ -43,4 +43,12 @@ plugins: [react()],
 })
 ```
 
+Now, you can run tests by typing the following terminal command in the project directory:
+
+```bash
+npm run test
+```
+
+The command finds all test files (.test.js or .test.jsx extension) from your project and run the test cases. By default, it will run in watch mode and re-run the tests each time when code is updated. You can stop watch mode by pressing 'q' in terminal.
+
 <img src="./src/assets/test.png" alt="Test png"></a>
