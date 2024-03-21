@@ -1,3 +1,5 @@
-# vite-react-studies
+# todo-app-with-test-file
 
-Vite React Studies.
+Metropolia UAS React.js lab. Todo app with App.test.js file.
+
+<img src="./src/assets/test.png" alt="Test png"></a>
