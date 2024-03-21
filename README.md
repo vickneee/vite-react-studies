@@ -12,11 +12,11 @@ To run tests, we should also add npm script to our project's package.json file
 
 ```bash
 "scripts": {
-"dev": "vite",
-"build": "vite build",
-"test": "vitest",
-"lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-"preview": "vite preview"
+  "dev": "vite",
+  "build": "vite build",
+  "test": "vitest",
+  "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview"
 },
 ```
 
