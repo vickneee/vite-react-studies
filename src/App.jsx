@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import MovieCard from "./components/MovieCard";
+import SearchButton from "./assets/search.svg";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const API_URL = "https://www.omdbapi.com?apikey=44a49269";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [movies, setMovies] = useState([]);
 
-export default App
+    useEffect(() => {
+        searchMovies("Helsinki");
+    }, []);
+
+    const searchMovies = async (title) => {
+        const response = await fetch(`${API_URL}&s=${title}`);
+        const data = await response.json();
+
+        setMovies(data['Search']);
+    };
+
+    return (
+        <div className="app">
+            <h1>OMDb API</h1>
+
+            <div className="search">
+                <input
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Search for movies"
+                />
+                <img
+                    src={SearchButton}
+                    alt="search"
+                    onClick={() => searchMovies(searchTerm)}
+                />
+            </div>
+
+            {movies?.length > 0 ? (
+                <div className="container">
+                    {movies.filter(movie => movie.Poster !== "N/A").map((movie) => (
+                        <MovieCard key={movie['imdbID']} movie={movie} />
+                    ))}
+                </div>
+            ) : (
+                <div className="empty">
+                    <h2>No movies found</h2>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default App;
