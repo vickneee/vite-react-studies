@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App';
 
-test('add todo',() => {
+test('add todo',(  ) => {
     render(<App/>);
 
     const desc = screen.getByPlaceholderText('Description');
