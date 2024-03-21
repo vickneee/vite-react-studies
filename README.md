@@ -5,7 +5,7 @@ Metropolia UAS React.js lab. Todo app with App.test.js file.
 To start using Vitest, we have to install it to our project using the following command in your React project folder:
 
 ```bash
-npm install --save-dev vitest
+npm install -D vitest
 ``` 
 
 To run tests, we should also add npm script to our project's package.json file
