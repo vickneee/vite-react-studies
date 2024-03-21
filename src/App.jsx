@@ -56,7 +56,7 @@ function App() {
                 method: 'POST',
                 body: JSON.stringify(newBook)
             })
-            .then(response => fetchItems())
+            .then(() => fetchItems())
             .catch(err => console.error(err))
     }
 
@@ -65,7 +65,7 @@ function App() {
             {
                 method: 'DELETE',
             })
-            .then(response => fetchItems())
+            .then(() => fetchItems())
             .catch(err => console.error(err))
     }
 
