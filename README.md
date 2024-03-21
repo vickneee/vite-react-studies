@@ -1,3 +1,4 @@
-# vite-react-studies
+# omdb-api-movies
 
-Vite React Studies.
+An API exercise in React JS. Vite + React App deployment on GitHub Pages.
+
