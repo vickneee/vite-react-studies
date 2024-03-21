@@ -51,4 +51,42 @@ npm run test
 
 The command finds all test files (.test.js or .test.jsx extension) from your project and run the test cases. By default, it will run in watch mode and re-run the tests each time when code is updated. You can stop watch mode by pressing 'q' in terminal.
 
+
+If needed installation:
+
+```bash
+npm install --save-dev eslint-plugin-jest
+```
+
+Here's an example of what your ESLint configuration file might look like after these changes:
+
+``javascript
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true, // Add this line
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jest/recommended', // Add this line
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+    'jest', // Add this line
+  ],
+  rules: {
+    // Your rules here
+  },
+};
+```
+
 <img src="./src/assets/test.png" alt="Test png"></a>
