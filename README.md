@@ -60,7 +60,7 @@ npm install --save-dev eslint-plugin-jest
 
 Here's an example of what your ESLint configuration file might look like after these changes:
 
-``javascript
+```javascript
 module.exports = {
   env: {
     browser: true,
