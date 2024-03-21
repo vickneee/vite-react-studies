@@ -1,3 +1,2 @@
-# vite-react-studies
+# form-phonebook
 
-Vite React Studies.
