@@ -1,5 +1,3 @@
-import React from "react";
-
 const Filter = ({ searchTerm, handleSearchChange }) => (
     <div>
         Filter: <input value={searchTerm} onChange={handleSearchChange} />
