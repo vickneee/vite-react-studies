@@ -73,21 +73,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ```
-# Repo resources
-
-[SamUCl](https://github.com/SamUCL)
-
-[gopinav](https://github.com/gopinav)
-
-[lashaNoz](https://github.com/lashaNoz)
-
-[kaizhelam](https://github.com/kaizhelam)
-
-[techaness](https://github.com/techvaness)
-
-[web develpment resouces](https://github.com/markodenic/web-development-resources)
-
-[andrapetrelonela](https://github.com/andrapetronela)
-
-
-
