@@ -2,6 +2,8 @@
 
 Metropolia UAS React.js lab. Todo app with App.test.js file.
 
+![Todo App](./src/assets/to-do-app.png)
+
 To start using Vitest, we have to install it to our project using the following command in your React project folder:
 
 ```bash
